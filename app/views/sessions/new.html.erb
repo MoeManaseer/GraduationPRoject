@@ -1,0 +1,23 @@
+<br><br>
+<div class="d-flex justify-content-center">
+<h1> رابطة الموظفين
+ </h1>
+</div>
+
+<%= form_for(:session,url:login_path) do |f| %>
+  <div class="form-group text-right" >
+    <div >
+      <%= f.label :username,"اسم المستخدم
+" , class: "p-1"%> <br>
+      <%= f.text_field :username, placeholder: "",class: "form-control" %>
+    </div> <br>
+    <div>
+      <%= f.label :password,"كلمة السر",class: "p-1" %> <br>
+      <%= f.password_field :password, placeholder: "", class: "form-control" %>
+    </div>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+  <%= f.button "الدخول", class: "btn btn-lg", style: "background-color: #e83c3c;color: white;" %>
+</div>
+<%end%>

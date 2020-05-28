@@ -1,0 +1,51 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick"> نموذج تكليف /تمديد/ تجديد تكليف مساعد باحث </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form3_path do |f| %>
+  <div class="d-flex justify-content-center">
+    <h4 class="thick"> الأستاذ الدكتور مدير مركز حمدي منكو للبحوث العلمية </h4>
+  </div> <br>
+  <div class="form-group text-right">
+    <h5> تحية طيبة وبعد </h5>
+    <h5><%= f.text_field :number ,class: "form-control p1" %>
+      أرجو التكرم بالموافقة على تكليف المذكور تالياً بالعمل كمساعد باحث مؤقت على حساب مشروع بحثي رقم
+    </h5>
+    <h5> والموسوم بـــ </h5>
+    <%= f.text_area :info, class: "form-control box" %>
+    <h5 class="thick"> والمدعوم من مركز حمدي منكو للبحوث العلمية والموجود حسابه لدى صندوق التبرعات</h5> <br>
+    <table class=" table table-bordered">
+      <tbody>
+        <tr>
+          <td> <%= f.text_field :number ,class: "form-control full" %></td>
+          <th> <h5 class="thick">الاسم</h5> </th>
+        </tr>
+        <tr>
+          <td> <%= f.text_field :number ,class: "form-control full" %></td>
+          <th> <h5 class="thick"> المؤهل العلمي</h5> </th>
+        </tr>
+        <tr>
+          <td> <%= f.text_field :number ,class: "form-control full" %></td>
+          <th> <h5 class="thick">المدة</h5> </th>
+        </tr>
+        <tr>
+          <td> <%= f.text_field :number ,class: "form-control full" %></td>
+          <th> <h5 class="thick"> المكافأة الشهرية</h5> </th>
+        </tr>
+      </tbody>
+    </table> <br>
+    <h5> <%= f.text_field :mainB ,class: "form-control p4" %>
+      :الباحث الرئيسي
+    </h5>
+    <h5>
+      <%= f.text_field :jobN ,class: "form-control p2" %>
+      &nbsp;
+  :الرقم الوظيفي
+  </h5>
+  <h5> <%= f.text_field :date ,class: "form-control p2" %>
+  :التاريخ
+  </h5> <br>
+  </div>
+  <%end%>
+</div>

@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center">
+<h2 class="thick">النماذج المبعوثة </h2>
+</div> <br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">حذف</th>
+      <th scope="col">ملفات</th>
+      <th scope="col">إظهار</th>
+      <th scope="col">تاريخ البعث</th>
+      <th scope="col">نوع النموذج</th>
+      <th scope="col">رقم النموذج</th>
+    </tr>
+  </thead>
+<tbody>
+  <% if @forms.any? %>
+  <%@forms.each do |key,value| %>
+    <tr>
+      <td>
+        <% case value.formType.to_i %>
+          <%when 1 %>
+            <%=link_to "حذف", delete1_path(value,:id => value.id),method: :delete  %>
+          <%when 2 %>
+          <%=link_to "حذف", delete2_path(value,:id => value.id),method: :delete  %>
+          <%when 3 %>
+            <%=link_to "حذف", delete3_path(value,:id => value.id),method: :delete  %>
+          <%when 4 %>
+            <%=link_to "حذف", delete4_path(value,:id => value.id),method: :delete  %>
+          <%when 5 %>
+            <%=link_to "حذف", delete5_path(value,:id => value.id),method: :delete  %>
+          <%when 6 %>
+            <%=link_to "حذف", delete6_path(value,:id => value.id),method: :delete  %>
+          <%when 7 %>
+            <%=link_to "حذف", delete7_path(value,:id => value.id),method: :delete  %>
+          <%when 8 %>
+            <%=link_to "حذف", delete8_path(value,:id => value.id),method: :delete  %>
+          <%when 9 %>
+            <%=link_to "حذف", delete9_path(value,:id => value.id),method: :delete  %>
+        <%end%>
+      </td>
+      <td>
+        <%if value.formType.to_i == 1 or value.formType.to_i == 2 or value.formType.to_i == 3 or value.formType.to_i == 8 or value.formType.to_i == 9 %>
+        <% if value.files.attached? %>
+        <% case value.formType.to_i %>
+          <%when 1 %>
+            <%= link_to 'تنزيل', form1_download_path(value,:id => value.id) %>
+          <%when 2 %>
+            <%= link_to 'تنزيل', form2_download_path(value,:id => value.id) %>
+          <%when 3 %>
+            <%= link_to 'تنزيل', form3_download_path(value,:id => value.id) %>
+          <%when 8 %>
+            <%= link_to 'تنزيل', form8_download_path(value,:id => value.id) %>
+          <%when 9 %>
+            <%= link_to 'تنزيل', form9_download_path(value,:id => value.id) %>
+        <%end%>
+        <%else%>
+        لا يوجد
+        <%end%>
+        <%else%>
+        لا يوجد
+        <%end%>
+      </td>
+      <td>
+        <% case value.formType.to_i %>
+          <%when 1 %>
+            <%=link_to "إظهار", show1_path(value,:id => value.id)  %>
+          <%when 2 %>
+            <%=link_to "إظهار", show2_path(value,:id => value.id)  %>
+          <%when 3 %>
+            <%=link_to "إظهار", show3_path(value,:id => value.id)  %>
+          <%when 4 %>
+            <%=link_to "إظهار", show4_path(value,:id => value.id)  %>
+          <%when 5 %>
+            <%=link_to "إظهار", show5_path(value,:id => value.id)  %>
+          <%when 6 %>
+            <%=link_to "إظهار", show6_path(value,:id => value.id)  %>
+          <%when 7 %>
+            <%=link_to "إظهار", show7_path(value,:id => value.id)  %>
+          <%when 8 %>
+            <%=link_to "إظهار", show8_path(value,:id => value.id)  %>
+          <%when 9 %>
+            <%=link_to "إظهار", show9_path(value,:id => value.id)  %>
+        <%end%>
+      </td>
+      <td><%=value.created_at%> </td>
+      <td>
+        <% case value.formType.to_i %>
+          <%when 1 %>
+            <%= "نموذج الترشيح جوائز مركز حمدي منكو للتميز العلمي (جائزتي علي منكو للباحث المتميز وجائزة سامية منكو للباحثة المتميزة)" %>
+          <%when 2 %>
+            <%= "نموذج الترشيح لجائزة علي منكو للباحث المتميز في الأردنطلبة الدراسات العليا" %>
+          <%when 3 %>
+            <%= "نموذج تكليف /تمديد/ تجديد تكليف مساعد باحث" %>
+          <%when 4 %>
+            <%= "نموذج تحويل مخصصات مشروع بحث علمي" %>
+          <%when 5 %>
+            <%= "تقرير علمي عن التقدم في مشروع بحث" %>
+          <%when 6 %>
+            <%= "نموذج مطالبة مالية" %>
+          <%when 7 %>
+            <%= "التقرير الشهري لمساعد الباحث" %>
+          <%when 8 %>
+            <%= "نموذج طلب سلفة مالية" %>
+          <%when 9 %>
+            <%= "نموذج طلب تسوية سلفة مالية" %>
+        <%end%>
+       </td>
+       <td> <%=key%></td>
+      <%end%>
+  <%else%>
+  <div class="d-flex justify-content-center">
+    <h4 class="thick"> لا يوجد نماذج</h4>
+  </div>
+<%end%>

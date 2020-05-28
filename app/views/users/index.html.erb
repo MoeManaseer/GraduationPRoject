@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+  <h3 class="thick"> الموظفين </h3>
+</div> <br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">اسم المستخدم
+</th>
+      <th scope="col">الاسم الاول
+</th>
+      <th scope="col">الاسم الاخير
+</th>
+      <th scope="col">Admin</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td scope="col"> <%= user.id %> </td>
+          <td> <%= user.username %> </td>
+          <td> <%= user.firstname %> </td>
+          <td> <%= user.lastname %> </td>
+          <% if user.admin == true %>
+          <td>
+            Yes
+          </td>
+          <%else%>
+          <td>
+            No
+          </td>
+          <%end%>
+          <td>   <%= link_to "حذف موظف
+", delete_path(:user => user.id), :method => :delete %> </td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>

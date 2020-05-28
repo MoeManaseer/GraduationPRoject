@@ -1,2 +1,25 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="container">
+<div class="d-flex ">
+<div class="mr-auto p-2"><img src = "hamdeMangoLogo.png" width="100"/></div>
+<div class="p-2"><img src = "universityLogo.jpg" width="100"/></div>
+</div>
+</div>
+<div class="d-flex justify-content-center">
+<h2 class="thick">الجامعة الأردنية</h2>
+</div> <br>
+<div class="d-flex justify-content-center">
+<h2 class="thick">مركز حمدي منكو للبحوث العلمية</h2>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+      <h4 class = "text-right thick">خدمات المركز</h4> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج الترشيح جوائز مركز حمدي منكو للتميز العلمي (جائزتي علي منكو للباحث المتميز وجائزة سامية منكو للباحثة المتميزة)",form1_path() %>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج الترشيح لجائزة علي منكو للباحث المتميز في الأردنطلبة الدراسات العليا"    , form2_path()%>   <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to"نموذج تكليف /تمديد/ تجديد تكليف مساعد باحث", form3_path() %>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج تحويل مخصصات مشروع بحث علمي" , form4_path()%>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "تقرير علمي عن التقدم في مشروع بحث", form5_path()%>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج مطالبة مالية" , form6_path()%>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "التقرير الشهري لمساعد الباحث"  , form7_path()%>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج طلب سلفة مالية" , form8_path()%>  <br></div> <br>
+      <div class="d-flex justify-content-end">  <%= link_to "نموذج طلب تسوية سلفة مالية", form9_path() %>  <br></div> <br>
+</div>
+<br><br>

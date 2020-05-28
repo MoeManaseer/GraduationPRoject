@@ -1,0 +1,92 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick"> نموذج طلب تسوية سلفة مالية </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form9_path do |f| %>
+  <div class="d-flex justify-content-center">
+    <h4 class="thick"> الأستاذ الدكتور مدير مركز حمدي منكو للبحوث العلمية </h4>
+  </div> <br>
+  <div class="form-group text-right">
+  <h5> تحية طيبة وبعد </h5>
+  <h5>
+
+    أرجو التكرم بالموافقة والايعاز بما يلزم من أجل تسوية السلفة المصروفة لي بقيمة
+<%= f.text_field :amount ,class: "form-control p1" %>
+من مخصصات مشروع بحثي
+  </h5>
+  <h5> رقم
+    <%= f.text_field :number ,class: "form-control p1" %>
+    والموسوم بـ
+  </h5>
+  <%= f.text_area :mawsoom, class: "form-control box" %> <br>
+  <h5 class="thick">المدعوم من مركز حمدي منكو للبحوث العلمية والموجود حسابه لدى صندوق التبرعات</h5> <br>
+  <h5 class="thick"> تفاصيل الفواتير للسلفة المصروفة / ترفق الفواتير الأصلية موقعة ومعتمدة حسب الأصول </h5>
+  <table class="table border border-light">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">القيمة الاجمالية للفاتورة</th>
+        <th scope="col">اسم الشركة</th>
+        <th scope="col">تاريخ الفاتورة</th>
+        <th scope="col">رقم الفاتورة</th>
+        <th scope="col">الرقم</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="col"> <%= f.text_field :bAmount ,class: "form-control full" %> </td>
+        <td><%= f.text_field :bCompany ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bDate ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bNum ,class: "form-control full" %></td>
+        <td>1 </td>
+      </tr>
+      <tr>
+        <td scope="col"> <%= f.text_field :bAmount1 ,class: "form-control full" %> </td>
+        <td><%= f.text_field :bCompany1 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bDate1 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bNum1 ,class: "form-control full" %></td>
+        <td>2 </td>
+      </tr>
+      <tr>
+        <td scope="col"> <%= f.text_field :bAmount2 ,class: "form-control full" %> </td>
+        <td><%= f.text_field :bCompany2 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bDate2 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bNum2 ,class: "form-control full" %></td>
+        <td>3 </td>
+      </tr>
+      <tr>
+        <td scope="col"> <%= f.text_field :bAmount3 ,class: "form-control full" %> </td>
+        <td><%= f.text_field :bCompany3 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bDate3 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bNum3 ,class: "form-control full" %></td>
+        <td>4 </td>
+      </tr>
+      <tr>
+        <td scope="col"> <%= f.text_field :bAmount4 ,class: "form-control full" %> </td>
+        <td><%= f.text_field :bCompany4 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bDate4 ,class: "form-control full" %> </td>
+        <td> <%= f.text_field :bNum4 ,class: "form-control full" %></td>
+        <td>5 </td>
+      </tr>
+    </tbody>
+  </table> <hr STYLE="background-color:#000000">
+  <h5> <%= f.text_field :mR ,class: "form-control p4" %>
+    :الباحث الرئيسي
+  </h5>
+  <h5>
+    <%= f.text_field :jNum ,class: "form-control p2" %>
+    &nbsp;
+:الرقم الوظيفي
+</h5>
+<h5> <%= f.text_field :date ,class: "form-control p2" %>
+:التاريخ
+</h5> <br>
+<div class="d-flex justify-content-end">
+      <%= f.file_field  :files%>
+    </div> <br>
+  <div class="d-flex justify-content-center">
+    <%= f.button "إرسال النموذج", class: "btn btn-lg ", style: "background-color: black;color: white;" %>
+  </div> <br>
+  </div>
+  <%end%>
+</div>

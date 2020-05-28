@@ -1,0 +1,75 @@
+class CreateForm2 < ActiveRecord::Migration[5.2]
+  def change
+    create_table :form2s do |t|
+      t.timestamps
+      t.string :formType
+      t.string :type1
+      t.string :eFullname
+      t.string :aFullname
+      t.string :uni
+      t.string :dep
+      t.string :country
+      t.string :email
+      t.string :wPhone
+      t.string :hPhone
+      t.string :pPhone
+      t.string :bDate
+      t.string :bUni
+      t.string :bGpa
+      t.string :btime
+      t.string :bsub
+      t.string :mDate
+      t.string :mUni
+      t.string :mGpa
+      t.string :mtime
+      t.string :msub
+      t.string :dDate
+      t.string :dUni
+      t.string :dGpa
+      t.string :dtime
+      t.string :dsub
+      t.string :rHeadline
+      t.string :rSolo
+      t.string :rPlace
+      t.string :rCharge
+      t.string :rCover
+      t.string :rRate
+      t.string :rYear
+      t.string :rHeadline1
+      t.string :rSolo1
+      t.string :rPlace1
+      t.string :rCharge1
+      t.string :rCover1
+      t.string :rRate1
+      t.string :rYear1
+      t.string :rHeadline2
+      t.string :rSolo2
+      t.string :rPlace2
+      t.string :rCharge2
+      t.string :rCover2
+      t.string :rRate2
+      t.string :rYear2
+      t.string :cHeadline
+      t.string :cSolo
+      t.string :cRate
+      t.string :cCharge
+      t.string :cFrom
+      t.string :cDate
+      t.string :cNum
+      t.string :cHeadline1
+      t.string :cSolo1
+      t.string :cRate1
+      t.string :cCharge1
+      t.string :cFrom1
+      t.string :cDate1
+      t.string :cNum1
+      t.string :cHeadline2
+      t.string :cSolo2
+      t.string :cRate2
+      t.string :cCharge2
+      t.string :cFrom2
+      t.string :cDate2
+      t.string :cNum2
+    end
+  end
+end

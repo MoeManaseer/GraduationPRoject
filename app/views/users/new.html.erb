@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+<h3 class="thick">انشاء موظف جديد </h3>
+</div>
+<%= form_for(:user,url:new_path) do |f| %>
+  <div class="form-group text-right">
+    <div>
+      <%= f.label :username,"اسم المستخدم" , class: "p-1"%> <br>
+      <%= f.text_field :username ,class: "form-control" %>
+    </div> <br>
+    <div>
+      <%= f.label :password,"كلمة السر",class: "p-1" %> <br>
+      <%= f.password_field :password, class: "form-control" %>
+    </div> <br>
+    <div>
+      <%= f.label :firstname,"الاسم الاول
+",class: "p-1" %> <br>
+      <%= f.text_field :firstname, class: "form-control" %>
+    </div> <br>
+    <div>
+      <%= f.label :lastname,"الاسم الاخير",class: "p-1" %> <br>
+      <%= f.text_field :lastname, class: "form-control" %>
+    </div> <br>
+    <div> <br>
+      <%= f.radio_button :contactmethod, 'admin', :checked => false %> Admin
+    </div> <br>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+  <%= f.button "انشاء", class: "btn btn-lg ", style: "background-color: #e83c3c;color: white;" %>
+</div>
+<%end%>
+<br>
+<% if @user.errors.any? %>
+<h2> The following errors occured:- </h2>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+  <li> <%= msg %> </li>
+  <%end%>
+</ul>
+<%end%>

@@ -1,0 +1,118 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick">تقرير علمي عن التقدم في مشروع بحث</h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form5_path do |f| %>
+  <div class="form-group text-right">
+  <h5>     <%= f.text_field :number ,class: "form-control p3" %> &nbsp;
+    رقم مشروع البحث
+  </h5>
+  <h5>     <%= f.text_field :rNumber ,class: "form-control p2" %> &nbsp;
+رقم التقرير  </h5>
+  <h5>     <%= f.text_field :date ,class: "form-control p2" %> &nbsp;
+التاريخ  </h5> <br>
+<h5> عنوان البحث </h5>
+<%= f.text_field :address ,class: "form-control full" %> <br> <br>
+<h5 class = "thick"> :معلومات أساسية عن المشروع </h5>
+<table class=" table table-bordered">
+  <tbody>
+    <tr>
+      <td> <%= f.text_field :mR ,class: "form-control full" %></td>
+      <th> <h5 class="thick"> الباحث الرئيسي</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :eR ,class: "form-control full" %></td>
+      <th> <h5 class="thick"> الباحثون المشاركون</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :aDate ,class: "form-control full" %></td>
+      <th> <h5 class="thick"> تاريخ الموافقة على الدعم</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :sDate ,class: "form-control full" %></td>
+      <th> <h5 class="thick"> تاريخ البدء به</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :fDate ,class: "form-control full" %></td>
+      <th> <h5 class="thick"> المدة المقررة لإنهاء المشروع</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :amount ,class: "form-control full" %></td>
+      <th> <h5 class="thick">مقدار الدعم</h5> </th>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :spent ,class: "form-control full" %></td>
+      <th> <h5 class="thick">مقدار الصرف حتى تاريخه</h5> </th>
+    </tr>
+  </tbody>
+</table> <br>
+<hr STYLE="background-color:#000000"> <br>
+<h5 class = "thick"> تفاصيل المبالغ المصروفة </h5>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td> <%= f.text_field :s1 ,class: "form-control full" %></td>
+      <td> <h5 class="thick"> الأجهزة </h5> </td>
+      <td> <%= f.text_field :s2 ,class: "form-control full" %></td>
+      <td> <h5 class="thick">مساعد الباحث </h5> </td>
+    </tr>
+    <tr>
+      <td><%= f.text_field :s3 ,class: "form-control full" %> </td>
+      <td> <h5 class="thick"> السفر</h5> </td>
+      <td><%= f.text_field :s4 ,class: "form-control full" %> </td>
+      <td> <h5 class="thick"> المواد</h5> </td>
+    </tr>
+    <tr>
+      <td><%= f.text_field :s5 ,class: "form-control full" %> </td>
+      <td><h5 class="thick"> متفرقات</h5>  </td>
+      <td><%= f.text_field :s6 ,class: "form-control full" %> </td>
+      <td><h5 class="thick"> الحاسوب</h5>  </td>
+    </tr>
+  </tbody>
+</table> <br>
+<hr STYLE="background-color:#000000"> <br>
+<h5 class = "thick"> تفاصيل صرف المبالغ المتبقية </h5>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td><%= f.text_field :l1 ,class: "form-control full" %> </td>
+      <td><h5 class="thick">الأجهزة </h5>  </td>
+      <td> <%= f.text_field :l3 ,class: "form-control full" %></td>
+      <td><h5 class="thick">مساعد الباحث </h5>  </td>
+    </tr>
+    <tr>
+      <td> <%= f.text_field :l2 ,class: "form-control full" %></td>
+      <td><h5 class="thick"> السفر</h5>  </td>
+      <td><%= f.text_field :l4 ,class: "form-control full" %> </td>
+      <td> <h5 class="thick"> المواد</h5> </td>
+    </tr>
+    <tr>
+      <td><%= f.text_field :l5 ,class: "form-control full" %> </td>
+      <td><h5 class="thick">متفرقات </h5>  </td>
+      <td> <%= f.text_field :l6 ,class: "form-control full" %></td>
+      <td><h5 class="thick"> الحاسوب</h5>  </td>
+    </tr>
+  </tbody>
+</table>
+<h5> <%= f.text_field :timeLeft ,class: "form-control p3" %>  &nbsp;
+  المدة المتبقية
+</h5> <br>
+<h5 class = "thick">الوضع الحالي للمشروع</h5> <br>
+<h5 class = "thick">  المشروع منته</h5>
+<h5> يرفق تقرير نهائي عن البحث متضمنا البحث/ البحوث المنشورة إن وجدت </h5> <br>
+<h5 class = "thick">  المشروع مستمر و ملخص لما تم انجازه</h5>
+<%= f.text_area :infoOn, class: "form-control box" %> <br> <br>
+<h5 class = "thick"> المشروع لم يبدأ بعد و مبررات عدم البدء بالمشروع والتاريخ المتوقع للبدء بالمشروع </h5>
+<%= f.text_area :infoNotStarted, class: "form-control box" %> <br> <br>
+<h5 class = "thick"> المشروع متوقف و مبررات التوقف والتاريخ المتوقع للبدء بالمشروع</h5>
+<%= f.text_area :infoStopped, class: "form-control box" %> <br> <br>
+<div class="d-flex justify-content-end">
+      <%= f.file_field  :files%>
+    </div> <br>
+  <div class="d-flex justify-content-center">
+    <%= f.button "إرسال النموذج", class: "btn btn-lg ", style: "background-color: black;color: white;" %>
+  </div> <br>
+</div>
+  <%end%>
+</div>

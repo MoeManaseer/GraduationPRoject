@@ -1,0 +1,46 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick"> التقرير الشهري لمساعد الباحث </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form7_path do |f| %>
+  <div class="d-flex justify-content-center">
+    <h4 class="thick"> الأستاذ الدكتور مدير مركز حمدي منكو للبحوث العلمية </h4>
+  </div> <br>
+  <div class="form-group text-right">
+    <h5>
+      <%= f.text_field :jNum ,class: "form-control p1" %>
+
+      أرجو التكرم بالموافقة على صرف مبلغ وقدره
+      <%= f.text_field :amount ,class: "form-control p1" %>
+      لمساعد / مساعدة الباحث
+      <%= f.text_field :name ,class: "form-control p1" %>
+      الرقم الوظيفي
+
+    </h5>
+    <h5>
+      <%= f.text_field :to ,class: "form-control p1" %>
+
+    من مخصصات مشروع البحث المذكور أدناه لقاء عمله / عملها على المشروع عن الفترة من
+    <%= f.text_field :from ,class: "form-control p1" %>
+    إلى
+  </h5> <br>
+    <h5> :عنوان المشروع </h5>
+    <%= f.text_area :rName, class: "form-control", style: "height: 100px;" %>
+    <h5 class="thick"> .المدعوم من مركز حمدي منكو للبحوث العلمية والموجود حسابه لدى صندوق التبرعات</h5>
+    <br><h5 class="thick"> :العمل المنجز </h5>
+    <%= f.text_area :fWork, class: "form-control", style: "height: 100px;" %>
+    <h5>       <%= f.text_field :Date ,class: "form-control p2" %>
+      :التاريخ
+    </h5>
+    <br><h5 class="thick">:ملاحظات الباحث واقتراحاته</h5>
+    <%= f.text_area :notes, class: "form-control", style: "height: 100px;" %>
+    <h5>       <%= f.text_field :Date ,class: "form-control p2" %>
+      :التاريخ
+    </h5>
+  </div><br>
+  <div class="d-flex justify-content-center">
+    <%= f.button "إرسال النموذج", class: "btn btn-lg ", style: "background-color: black;color: white;" %>
+  </div> <br>
+  <%end%>
+</div>

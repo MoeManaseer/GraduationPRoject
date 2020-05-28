@@ -1,0 +1,52 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick">نموذج تحويل مخصصات مشروع بحث علمي </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form4_path do |f| %>
+  <div class="d-flex justify-content-center">
+    <h4 class="thick"> الأستاذ الدكتور مدير مركز حمدي منكو للبحوث العلمية </h4>
+  </div> <br>
+  <div class="form-group text-right">
+  <h5>
+    <%= f.text_field :from ,class: "form-control p1" %>
+    أرجو التكرم بالموافقة والايعاز لمن يلزم من أجل تحويل مبلغ وقدره
+<%= f.text_field :amount ,class: "form-control p1" %>
+    دينارا من بند
+    <%= f.text_field :to ,class: "form-control p1" %>
+     إلى بند
+  </h5>
+  <h5>
+     ضمن ميزانية مشروع بحثي رقم
+     <%= f.text_field :number ,class: "form-control p1" %>
+     والموسوم بـــــــ
+  </h5>
+  <%= f.text_area :info, class: "form-control box" %>
+  <h5 class="thick"> والمدعوم من مركز حمدي منكو للبحوث العلمية والموجود حسابه لدى صندوق التبرعات</h5> <br>
+  <h5> :وذلك للأسباب التالية </h5>
+  <h5> <%= f.text_field :r1 ,class: "form-control p4" %>
+    .1
+  </h5>
+  <h5> <%= f.text_field :r2 ,class: "form-control p4" %>
+    .2
+  </h5>
+  <h5> <%= f.text_field :r3 ,class: "form-control p4" %>
+    .3
+  </h5> <br>
+  <h5> <%= f.text_field :mR ,class: "form-control p4" %>
+    :الباحث الرئيسي
+  </h5>
+  <h5>
+    <%= f.text_field :jNum ,class: "form-control p2" %>
+    &nbsp;
+:الرقم الوظيفي
+</h5>
+<h5> <%= f.text_field :date ,class: "form-control p2" %>
+:التاريخ
+</h5> <br>
+<div class="d-flex justify-content-center">
+  <%= f.button "إرسال النموذج", class: "btn btn-lg ", style: "background-color: black;color: white;" %>
+</div> <br>
+  </div>
+  <%end%>
+</div>

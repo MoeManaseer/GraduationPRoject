@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+<h3 class="thick"> نموذج طلب سلفة مالية </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form8_path do |f| %>
+    <div class="d-flex justify-content-center">
+      <h4 class="thick"> الأستاذ الدكتور مدير مركز حمدي منكو للبحوث العلمية </h4>
+    </div> <br>
+    <div class="form-group text-right">
+    <h5> تحية طيبة وبعد </h5>
+    <h5><%= f.text_field :amount ,class: "form-control p1" %>
+      أرجو التكرم بالموافقة والايعاز بما يلزم من أجل السير في اجراءات منحي سلفة مالية بقيمة
+    </h5>
+    <h5>
+<%= f.text_field :from ,class: "form-control p1" %>
+       دينار ضمن حجز المخصصات المرفق رقم
+<%= f.text_field :number ,class: "form-control p1" %>
+       والمعبأ من مستودع كلية / مركز
+     </h5>
+     <h5>
+        من مخصصات مشروع بحثي رقم
+        <%= f.text_field :rNum ,class: "form-control p1" %>
+        المدعوم من مركز حمدي منكو للبحوث العلمية والموسوم بـ
+     </h5>
+     <%= f.text_area :mawsoom, class: "form-control box" %>
+     <h5 class="thick"> .والموجود حسابه لدى صندوق التبرعات </h5> <br>
+     <h5> <%= f.text_field :mR ,class: "form-control p4" %>
+       :الباحث الرئيسي
+     </h5>
+     <h5>
+       <%= f.text_field :jNum ,class: "form-control p2" %>
+       &nbsp;
+:الرقم الوظيفي
+</h5>
+<h5> <%= f.text_field :date ,class: "form-control p2" %>
+  :التاريخ
+</h5>
+<br>
+<h5 class="thick"> ملاحظة: على الباحث ارفاق كشف حسابات للمشروع حتى تاريخه </h5>
+</div> <br>
+<div class="d-flex justify-content-end">
+      <%= f.file_field  :files%>
+    </div> <br><br>
+  <div class="d-flex justify-content-center">
+    <%= f.button "إرسال النموذج", class: "btn btn-lg ", style: "background-color: black;color: white;" %>
+  </div> <br>
+  <%end%>
+</div>

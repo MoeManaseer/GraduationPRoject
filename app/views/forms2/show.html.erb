@@ -1,0 +1,209 @@
+
+<div class="d-flex justify-content-center">
+<h3 class="thick"> نموذج الترشيح لجائزة علي منكو للباحث المتميز في الأردن ل طلبة الدراسات العليا </h3>
+</div> <br>
+<div class="container border border-dark rounded"> <br>
+  <%= form_for :form,url:form2_path do |f| %>
+  <div class="form-group text-right">
+    <p4 class="thick">
+      <%= f.text_field :type1 ,class: "form-control p3" %>&nbsp;
+      الجائزة التي يتقدم لها المرشح/ المرشحة في مجال
+    </p4> <br><br>
+    <p4 class="thick">
+      الاسم الرباعي للمرشح / المرشحة
+    </p4> <br><br>
+    <p4 class="thick">
+      <%= f.text_field :eFullname ,class: "form-control p3" %> &nbsp; &nbsp;&nbsp;
+      باللغة العربية
+    </p4> <br><br>
+    <p4 class="thick">
+      <%= f.text_field :aFullname ,class: "form-control p3" %>&nbsp;
+      باللغة الانجليزية
+    </p4> <br> <br>
+    <p4 class="thick"> عنوان العمل </p4> <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">الدولة</th>
+          <th scope="col">القسم</th>
+          <th scope="col">المؤسسة أو الجامعة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :uni ,class: "form-control full" %></td>
+          <td><%= f.text_field :dep ,class: "form-control full" %></td>
+          <td><%= f.text_field :country ,class: "form-control full" %></td>
+        </tr>
+      </tbody>
+    </table>
+    <p4 class="thick"> الهاتف </p4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">العمل</th>
+          <th scope="col">المنزل</th>
+          <th scope="col">الخلوي </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :wPhone ,class: "form-control full" %></td>
+          <td><%= f.text_field :hPhone ,class: "form-control full" %></td>
+          <td><%= f.text_field :pPhone ,class: "form-control full" %></td>
+        </tr>
+      </tbody>
+    </table> <br>
+    <p4 class="thick">
+      <%= f.text_field :email ,class: "form-control p3" %>&nbsp;
+      البريد الالكتروني
+    </p4> <br><br>
+    <p4 class="thick"> المؤهلات الأكاديمية </p4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">موضوع الدراسة / الرسالة</th>
+          <th scope="col"> مدة الدراسة </th>
+          <th scope="col"> التقدير</th>
+          <th scope="col"> الجامعة</th>
+          <th scope="col">تاريخ الحصول عليها</th>
+          <th scope="col">الدرجة  </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :bsub ,class: "form-control full" %></td>
+          <td><%= f.text_field :btime ,class: "form-control full" %></td>
+          <td><%= f.text_field :bGpa ,class: "form-control full" %></td>
+          <td><%= f.text_field :bUni ,class: "form-control full" %></td>
+          <td><%= f.text_field :bDate ,class: "form-control full" %></td>
+          <td>البكالوريس</td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :msub ,class: "form-control full" %></td>
+          <td><%= f.text_field :mtime ,class: "form-control full" %></td>
+          <td><%= f.text_field :mGpa ,class: "form-control full" %></td>
+          <td><%= f.text_field :mUni ,class: "form-control full" %></td>
+          <td><%= f.text_field :mDate ,class: "form-control full" %></td>
+          <td>الماجستير</td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :dsub ,class: "form-control full" %></td>
+          <td><%= f.text_field :dtime ,class: "form-control full" %></td>
+          <td><%= f.text_field :dGpa ,class: "form-control full" %></td>
+          <td><%= f.text_field :dUni ,class: "form-control full" %></td>
+          <td><%= f.text_field :dDate ,class: "form-control full" %></td>
+          <td>الدكتوراة</td>
+        </tr>
+      </tbody>
+    </table>
+    <p4 class="thick"> الإنتاج العلمي المقدم للحصول على الجائزة </p4>
+    <br>
+    <p4 class="thick"> الأبحاث (ارفاق ما يثبت ذلك) </p4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col"> لاستخدام لجنة الجائزة</th>
+          <th scope="col">سنة النشر </th>
+          <th scope="col">تصنيف المجلة </th>
+          <th scope="col">اسم المجلة </th>
+          <th scope="col">الباحث المسؤول </th>
+          <th scope="col"> ترتيب الباحث</th>
+          <th scope="col">منفرد او مشترك </th>
+          <th scope="col">عنوان البحث </th>
+          <th scope="col">الرقم </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :rYear ,class: "form-control full" %></td>
+          <td><%= f.text_field :rRate ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCover ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCharge ,class: "form-control full" %></td>
+          <td><%= f.text_field :rPlace ,class: "form-control full" %></td>
+          <td><%= f.text_field :rSolo ,class: "form-control full" %></td>
+          <td><%= f.text_field :rHeadline ,class: "form-control full" %></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :rYear1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rRate1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCover1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCharge1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rPlace1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rSolo1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rHeadline1 ,class: "form-control full" %></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :rYear2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rRate2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCover2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rCharge2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rPlace2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rSolo2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :rHeadline2 ,class: "form-control full" %></td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <p4 class="thick"> براءات الاختراع  (ارفاق ما يثبت ذلك) </p4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">لاستخدام لجنة الجائزة </th>
+          <th scope="col"> رقم التسجيل</th>
+          <th scope="col"> تاريخ صدورها</th>
+          <th scope="col">الجهة الصادرة منها </th>
+          <th scope="col"> الباحث المسؤول</th>
+          <th scope="col"> ترتيب الباحث</th>
+          <th scope="col"> منفرد ام مشترك</th>
+          <th scope="col"> عنوان الاختراع او البراءة</th>
+          <th scope="col"> الرقم</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :cNum ,class: "form-control full" %></td>
+          <td><%= f.text_field :cDate ,class: "form-control full" %></td>
+          <td><%= f.text_field :cFrom ,class: "form-control full" %></td>
+          <td><%= f.text_field :cCharge ,class: "form-control full" %></td>
+          <td><%= f.text_field :cRate ,class: "form-control full" %></td>
+          <td><%= f.text_field :cSolo ,class: "form-control full" %></td>
+          <td><%= f.text_field :cHeadline ,class: "form-control full" %></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :cNum1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cDate1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cFrom1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cCharge1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cRate1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cSolo1 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cHeadline1 ,class: "form-control full" %></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= f.text_field :cNum2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cDate2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cFrom2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cCharge2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cRate2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cSolo2 ,class: "form-control full" %></td>
+          <td><%= f.text_field :cHeadline2 ,class: "form-control full" %></td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+    <p4 class="thick"> اتعهد انا الموقع ادناه ان المعلومات المذكورة اعلاه والمرفقة بطلب الترشيح حقيقية وتعكس انجازاتي وغير منقولة عن مصادر أخرى، وأنني قد قمت بارفاق كافة الوثائق المطلوبة لإثبات صحة المعلومات. وقد تم إعلامي بأنه سيتم استثناء أي انجاز علمي في حال عدم ارفاق ما يثبته. </p4>
+    <br>
+  <%end%>
+</div>
